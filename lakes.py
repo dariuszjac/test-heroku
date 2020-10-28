@@ -3,10 +3,10 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/sample_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://hgaqssokeffxzw:e3cc17cbba219f3f694067824ff47224a6615d8da27d79e424ac42fb8289c9da@ec2-52-86-116-94.compute-1.amazonaws.com:5432/d47mt2upvq1889'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
 db = SQLAlchemy(app)
+db.create_all()
 
 
 class User(db.Model):
