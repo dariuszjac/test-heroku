@@ -23,7 +23,7 @@ class User(db.Model):
 
 @app.route('/')
 def index():
-    return render_template('home.html')
+    return 'Hello, World!'
 
 
 @app.route('/data', methods=['POST', 'GET'])
